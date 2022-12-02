@@ -1,0 +1,298 @@
+@import "./variables";
+
+@mixin grid-cols($col) {
+  grid-template-columns: repeat($col, minmax(0, 1fr));
+}
+@mixin grid-rows($col) {
+  grid-template-rows: repeat($col, minmax(0, 1fr));
+}
+
+
+.navbar-header {
+  .resize-logo {
+    height: 5rem;
+  }
+
+  span:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 0.25rem;
+    text-decoration: 0.2rem underline $primary-color;
+    color: $secondary-color;
+    text-underline-offset: 0.2rem;
+  }
+
+  span:not(:hover) {
+    transition: 0.5s;
+    color: black;
+  }
+}
+
+.hero-bg {
+  background-color: white;
+}
+
+.primary-badge {
+  background-color: $primary-color;
+  border-radius: 1rem;
+  color: whitesmoke;
+}
+.secondary-badge {
+  background-color: $primary-color;
+  border-radius: 1rem;
+  color: whitesmoke;
+}
+
+.primary-btn {
+  background-color: $primary-color;
+  border: 0;
+  color: whitesmoke;
+  border-radius: 1rem;
+}
+
+.primary-btn:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.primary-btn:not(:hover) {
+  transition: 0.5s;
+}
+
+.secondary-btn {
+  @extend .primary-btn;
+  background-color: $secondary-color;
+}
+
+.hero-image-card {
+  border-radius: 0.75rem;
+  height: 20rem;
+  width: 25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#about-me-container {
+  background: rgb(71, 19, 2);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 19, 2, 1) 0%,
+    rgba(181, 113, 31, 1) 55%,
+    rgba(251, 133, 0, 1) 100%
+  );
+  color: black;
+
+  .contribute-grid-showcase {
+    display: grid;
+    @include grid-cols(2);
+    gap: 1.5rem;
+    .box-grid {
+      border-left: 0.3rem solid $third-color;
+      border-radius: 0.25rem;
+      width: 11rem;
+      background-color: #fca311;
+      box-shadow: 0 0 10px #fff, 0 0 10px #e7b76b, 0 0 10px #edb357,
+        0 0 15px #e8c996, 0 0 10px #efcdde, 0 0 20px #f2b451, 0 0 20px #f0af46;
+    }
+    .hero-icon {
+      position: relative;
+      font-weight: 900;
+      padding: 0.75rem;
+    }
+    .text-showcase {
+      display: flex;
+      align-items: bottom;
+      justify-content: center;
+    }
+  }
+}
+
+//- glow color
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.glow-less-bright {
+  animation: glow-less-bright 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #ecd6e1, 0 0 50px #ecc5d9, 0 0 60px #f2cee0, 0 0 70px #eecfdf;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ebd2df, 0 0 40px #edc8da,
+      0 0 50px #fbd6e8, 0 0 60px #efcdde, 0 0 70px #f3d5e4, 0 0 80px #edc7da;
+  }
+}
+
+@-webkit-keyframes glow-less-bright {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #e60073, 0 0 20px #ecd6e1,
+      0 0 40px #ecc5d9, 0 0 60px #f2cee0, 0 0 70px #eecfdf;
+  }
+
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ebd2df, 0 0 30px #edc8da,
+      0 0 30px #fbd6e8, 0 0 50px #efcdde, 0 0 70px #f3d5e4, 0 0 80px #edc7da;
+  }
+}
+
+#skill-section {
+  .skill-container-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    z-index: 0;
+    border-radius: 10px;
+    border: 10px solid rgb(6, 86, 147);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    box-shadow: rgba(6, 86, 147, 0.4) -5px 5px, rgba(6, 86, 147, 0.3) -10px 10px,
+      rgba(6, 86, 147, 0.2) -15px 15px, rgba(6, 86, 147, 0.1) -20px 20px,
+      rgba(6, 86, 147, 0.05) -25px 25px;
+    .skill-topic-box {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(6, 86, 147);
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .grid-skill-showcase {
+    display: grid;
+    place-self: center;
+    @include grid-cols(4);
+    gap: 3rem;
+    .skill-icon {
+      cursor: pointer;
+      width: 3.5rem;
+      border: 1px solid #cdcbd0;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $fifth-color;
+      line-height: 1.5rem;
+      opacity: 90%;
+      border-radius: 50%;
+      clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+    }
+    .skill-icon:hover {
+      transition: 0.6s;
+      width: 3.75rem;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    .skill-icon:not(:hover) {
+      transition: 0.6s;
+    }
+
+    .circle {
+      border: 10px solid green;
+      border-radius: 50px;
+      position: absolute;
+      clip: rect(0px, 50px, 100px, 0px);
+    }
+
+    .img-icon {
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+#skill-framework-section {
+  .skill-container-wrapper-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: stretch;
+    z-index: 0;
+    border-radius: 10px;
+    border: 10px solid rgb(4, 79, 103);
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    box-shadow: rgba(4, 79, 103, 0.4) 5px 5px, rgba(4, 79, 103, 0.3) 10px 10px,
+      rgba(4, 79, 103, 0.2) 15px 15px, rgba(4, 79, 103, 0.1) 20px 20px,
+      rgba(4, 79, 103, 0.05) 25px 25px;
+    .skill-topic-box {
+      display: flex;
+      background-color: rgb(4, 79, 103);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .flexbox {
+    display: flexbox;
+    justify-content: center;
+    place-items: center;
+  }
+
+  .tool-collection-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .tool-box {
+      border-radius: 50%;
+    }
+    .img-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  .grid-skill-showcase {
+    display: grid;
+    place-self: center;
+    @include grid-cols(3);
+    gap: 1.5rem;
+    .skill-icon {
+      cursor: pointer;
+      width: 3.5rem;
+      border: 1px solid #cdcbd0;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.5rem;
+      background-color: $fifth-color;
+      opacity: 90%;
+      border-radius: 50%;
+      clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+    }
+
+    .circle {
+      border: 10px solid green;
+      border-radius: 50px;
+      position: absolute;
+      clip: rect(0px, 50px, 100px, 0px);
+    }
+
+    .img-icon {
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+//- prominent-point-section
+#prominent-point-section {
+  background-color: rgb(24, 90, 129);
+  position: relative;
+  top: -9rem;
+}
