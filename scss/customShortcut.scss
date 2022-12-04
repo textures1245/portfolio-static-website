@@ -53,6 +53,9 @@ span {
 .container-xl {
   max-width: containerBp("xl");
 }
+.container-2xl {
+  max-width: containerBp("2xl");
+}
 
 //- margin and padding
 @for $i from 1 to 21 {
@@ -201,15 +204,14 @@ span {
 
 @for $i from 1 to 7 {
   .size-#{$i} {
-    font-size: 0.40rem * $i;
+    font-size: 0.4rem * $i;
   }
 
   .letter-spacing-#{$i} {
     letter-spacing: 0.1rem * $i;
   }
 
-  .underline-#{$i} 
-  {
+  .underline-#{$i} {
     text-decoration-thickness: $i * 1px;
     text-decoration-line: underline;
   }
@@ -232,7 +234,7 @@ span {
 
 //- display styles
 .flex {
-  display: flex
+  display: flex;
 }
 
 .flex-center {
@@ -252,6 +254,15 @@ span {
   align-items: center;
 }
 
+.flex-items-bottom {
+  @include flexItem(flex-end);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .grid-column {
   display: grid;
   flex-direction: column;
@@ -263,7 +274,7 @@ span {
 }
 
 .items-center {
-  @include flexItem('center')
+  @include flexItem("center");
 }
 
 .absolute {
@@ -281,7 +292,6 @@ span {
 .f-right {
   float: right;
 }
-
 
 //* gaps flexbox style
 @for $i from 1 to 6 {
@@ -325,8 +335,7 @@ span {
   }
 
   //- opacity
-  .opacity-#{$i} 
-  {
+  .opacity-#{$i} {
     opacity: $i * 10;
   }
 }
@@ -342,6 +351,3 @@ span {
 .h-full {
   height: 100%;
 }
-
-
-
