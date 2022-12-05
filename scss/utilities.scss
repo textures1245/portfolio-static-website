@@ -36,13 +36,13 @@
 
 @-webkit-keyframes glow-less-bright {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #e60073, 0 0 20px #ecd6e1,
-      0 0 40px #ecc5d9, 0 0 60px #f2cee0, 0 0 70px #eecfdf;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f1dae5, 0 0 20px #fdf3f8,
+      0 0 40px #f2e8ed, 0 0 60px #f0e0e8, 0 0 70px #fff9fc;
   }
 
   to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #ebd2df, 0 0 30px #edc8da,
-      0 0 30px #fbd6e8, 0 0 50px #efcdde, 0 0 70px #f3d5e4, 0 0 80px #edc7da;
+    text-shadow: 0 0 10px #fff, 0 0 20px #f5eaf0, 0 0 30px #edc8da,
+      0 0 30px #fbe8f1, 0 0 50px #f7ecf1, 0 0 70px #f9eff4, 0 0 80px #fff2f8;
   }
 }
 
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   z-index: 1;
   width: 24rem;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(255, 255, 255);
 }
 
 //- text rotation (rotated each char)
@@ -168,4 +168,32 @@ h6 span {
   box-shadow: rgba(255, 255, 255, 0.4) 5px 5px, rgba(255, 255, 255, 0.3) 10px 10px,
     rgba(255, 255, 255, 0.2) 15px 15px, rgba(255, 255, 255, 0.1) 20px 20px,
     rgba(255, 255, 255, 0.05) 25px 25px;
+}
+
+//- curve wave background 
+.curve-spacer {
+  aspect-ratio: 980/300;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.layer-1 {
+  background-image: url('./../assets/icons/layer-wave3.svg');
+}
+
+.badge-text {
+  background: rgb(16, 16, 16);
+  padding: 0.5rem;
+  border-radius: 5%;
+
+}
+
+.phakh-logo {
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./../assets/icons/phakh-high-resolution-color-logo.svg');
 }
