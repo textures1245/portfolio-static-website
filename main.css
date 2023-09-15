@@ -6,6 +6,13 @@
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .sm-small {
+    text-indent: 0 !important;
+    font-size: 14px !important;
+  }
+}
 body {
   background: #ececec;
   background: linear-gradient(
@@ -17,7 +24,9 @@ body {
     #fff 20%,
     #fff 100%
   );
+  width: 100%
 }
+
 .resize-logo {
   height: 4rem;
 }
@@ -75,16 +84,87 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
+@media screen and (max-width: 1024px) {
+  #hero-container-card div.flex-center {
+    text-align: center;
+    gap: 2rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hero-container-card {
+    margin-bottom: 5rem !important;
+  }
+
+}
+
 #about-me-container {
   background: #471302;
   background: linear-gradient(90deg, #471302 0%, #b5711f 55%, #fb8500 100%);
   color: black;
 }
+
+@media screen and (max-width: 1024px) {
+  #about-me-container.h-60vh {
+    height: 100% !important;
+    display: relative;
+  }
+
+  #about-me-container {
+    height: 100% !important;
+    display: relative;
+    padding-top: 10rem !important;
+    padding-bottom: 10rem !important;
+    margin-top: 20rem !important;
+    margin-bottom: 10rem;
+  }
+
+  #about-me-container div.flex-between {
+    text-align: center;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-me-container .contribute-grid-showcase {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 5rem !important;
+  }
+
+  #about-me-container .contribute-grid-showcase .box-grid {
+    border-left: 0.3rem solid #023047;
+    border-radius: 0.25rem;
+    width: 20rem !important;
+    height: 100% !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background-color: #fca311;
+    box-shadow: 0 0 10px #fff, 0 0 10px #e7b76b, 0 0 10px #edb357,
+      0 0 15px #e8c996, 0 0 10px #efcdde, 0 0 20px #f2b451, 0 0 20px #f0af46;
+  }
+
+
+}
+
+#about-me-container {
+  height: 100%;
+  margin-top: 6rem ;
+  margin-bottom: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 #about-me-container .contribute-grid-showcase {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
 }
+
 #about-me-container .contribute-grid-showcase .box-grid {
   border-left: 0.3rem solid #023047;
   border-radius: 0.25rem;
@@ -103,6 +183,7 @@ body {
   align-items: bottom;
   justify-content: center;
 }
+
 #skill-section #lang-skills .skill-container-wrapper {
   display: flex;
   flex-direction: row;
@@ -166,6 +247,70 @@ body {
   width: 2rem;
   height: 2rem;
 }
+
+@media screen and (max-width: 1024px) {
+  #comp-lang-skills div.skill-container-wrapper {
+    display: flex;
+    flex-direction: column !important;
+    border: none !important;
+  }
+
+  #skill-section {
+    margin-top: 10rem !important;
+    margin-bottom: 10rem !important;
+  }
+
+  #skill-section #lang-skills .skill-container-wrapper .skill-topic-box {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  #skill-section #lang-skills .grid-skill-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    items-align: center; !important;
+    gap: 2rem !important;
+  }
+
+  #skill-section #skill-framework-section .skill-container-wrapper-2 {
+    display: flex;
+    flex-direction: column !important;
+    border: none !important;
+}
+  #skill-section #skill-framework-section .skill-container-wrapper-2 div.relative {
+    display: flex;
+    flex-direction: column !important;
+    border: none !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+#skill-section #skill-framework-section .skill-container-wrapper-2 .skill-topic-box-2 {
+  width: 100% !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  margin-left: 0 !important;
+}
+
+#skill-section #skill-framework-section .skill-container-wrapper-2 div.flex-end {
+  order: -9999 !important;
+}
+
+#skill-section #skill-framework-section .grid-skill-showcase-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  items-align: center; !important;
+  gap: 2rem !important;
+  }
+
+#skill-section {
+  margin-top: 2rem !important;
+  margin-bottom: 25rem !important;
+}
+}
+
 #skill-section #skill-framework-section .skill-container-wrapper-2 {
   display: flex;
   flex-direction: row;
@@ -395,6 +540,22 @@ body {
     align-self: flex-start;
   }
 }
+
+@media screen and (max-width: 1048px) {
+#prominent-point-section .box-grid {
+    margin-top: 15rem;
+    margin-bottom: 7rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+}
+
+#prominent-point-section.h-100vh {
+  height: 100% !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
 #work-container-section
   .work-collection-warper
   .grid-box
