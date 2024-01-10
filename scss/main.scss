@@ -94,6 +94,23 @@ body {
   transition: 0.5s;
 }
 
+.accent-btn {
+  background-color: $third-color;
+  border: 0;
+  color: whitesmoke;
+  border-radius: 1rem;
+}
+
+.accent-btn:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.accent-btn:not(:hover) {
+  transition: 0.5s;
+}
+
 .secondary-btn {
   @extend .primary-btn;
   background-color: $secondary-color;
