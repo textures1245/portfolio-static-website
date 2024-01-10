@@ -677,3 +677,30 @@ body {
   color: #fb8500;
   text-underline-offset: 4px;
 }
+
+.badge {
+  border-radius: 1rem;
+  padding: 0.20rem 0.5rem;
+}
+
+.badge-primary {
+  background-color: #fb8500;
+  color: whitesmoke;
+}
+
+.badge-secondary {
+  background-color: #0075C3;
+  color: whitesmoke;
+}
+
+ .badge-accent {
+  background-color: #00AA6E;
+  color: whitesmoke;
+}
+
+.tool-project-usage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
